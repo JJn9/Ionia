@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Ionia/precache-manifest.c221002669239ee7990f132e900ec85a.js"
+  "/Ionia/precache-manifest.bc31059cf9d2be34f3e4c11759350ed1.js"
 );
 
 self.addEventListener('message', (event) => {
