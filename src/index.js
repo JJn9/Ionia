@@ -10,6 +10,8 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip'
 
 import { Home } from './bundles/common/components/Home'
+import { BuildsContainer } from './bundles/common/components/Builds/index'
+
 
 const routing = (
     <Router>
@@ -37,9 +39,10 @@ const routing = (
                       </OverlayTrigger>
                   </ul>
               </nav>
-          <div  className="container">
+          <div  className="container-fluid vh-100">
             <Route exact path="/"><Redirect to="/home"/></Route>
             <Route path="/home" component={Home}></Route>
+            <Route path="/builds" component={BuildsContainer}></Route>
           </div>
       </div>
     </Router>

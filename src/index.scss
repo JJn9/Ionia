@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sen:400,700,800&display=swap');
+
 $text-primary: #23232e;
 $text-secondary: #141418;
 $bg-primary: #ececec;
@@ -6,22 +8,20 @@ $logo-color: #44C688;
 $logo-color-secondary: #38a771;
 $transition-speed: 600ms;
 
-:root {
-    font-size: 16px !important;
-    font-family: 'Open Sans' !important;
-}
-
 body {
+    font-size: 16px !important;
+    font-family: 'Sen', sans-serif;
     color: black;
     background-color: white;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 main {
-    margin-left: 5rem;
+    margin-left: 4.5rem;
     padding: 1rem;
 }
 
@@ -36,6 +36,13 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: $logo-color;
 }
+
+
+.title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 
 .sidebar {
     position: fixed;
@@ -71,12 +78,6 @@ body::-webkit-scrollbar-thumb {
 .sidebar-link:hover {
     filter: grayscale(0%) opacity(1);
     background: $bg-secondary;
-}
-
-.is-active {
-    // background: $bg-secondary;
-    border-right: 3px solid $logo-color;
-    filter: grayscale(0%) opacity(1);
 }
 
 .link-text {
@@ -143,7 +144,7 @@ body::-webkit-scrollbar-thumb {
     .sidebar {
         bottom: 0;
         width: 100vw;
-        height: 5rem;
+        height: 4.5rem;
     }
 
     .logo {
@@ -158,17 +159,38 @@ body::-webkit-scrollbar-thumb {
         justify-content: center;
     }
 
+    .list-champions {
+        padding-inline-start: 0 !important;
+    }
+
     main {
-        margin: 0;
+        margin-left: 0;
+    }
+
+    .left-col {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .right-col {
+        max-height: 60vh !important;
+        margin-top: 2rem;
+        overflow: auto;
     }
 
     .sidebar-link:hover {
         border-bottom: 2px $logo-color
     }
+
+    .is-active {
+        // background: $bg-secondary;
+        border-top: 3px solid $logo-color;
+        filter: grayscale(0%) opacity(1);
+    }
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     .sidebar {
         top: 0;
         width: 4.5rem;
@@ -179,8 +201,81 @@ body::-webkit-scrollbar-thumb {
         display: inline;
     }
 
+    .left-col {
+        margin-top: 5rem;
+    }
+
+    .right-col {
+        margin-top: 5rem;
+        max-height: 90vh;
+        overflow: auto;
+    }
+    
+    .list-champions {
+        padding-inline-start: 0 !important;
+    }
+
     .sidebar:hover .logo-text
     {
         left: 0px;
     }
+
+    .is-active {
+        // background: $bg-secondary;
+        border-right: 3px solid $logo-color;
+        filter: grayscale(0%) opacity(1);
+    }
   }
+
+  /*medium screens*/
+  @media only screen and (max-width: 800px) {
+    .sidebar {
+        bottom: 0;
+        width: 100vw;
+        height: 4.5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+    }
+
+    .sidebar-link {
+        justify-content: center;
+    }
+
+    .list-champions {
+        padding-inline-start: 0 !important;
+    }
+
+    main {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .left-col {
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .right-col {
+        max-height: 60vh !important;
+        margin-top: 2rem;
+        overflow: auto;
+    }
+
+    .sidebar-link:hover {
+        border-bottom: 2px $logo-color;
+        border-right: none;
+    }
+
+    .is-active {
+        // background: $bg-secondary;
+        border-top: 3px solid $logo-color;
+        filter: grayscale(0%) opacity(1);
+    }
+}

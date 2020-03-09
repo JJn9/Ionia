@@ -1,0 +1,52 @@
+@import '../../../../index.scss';
+
+
+
+.left-col {
+    .undertext {
+        margin-top: 2rem;
+        font-size: 2rem;
+        text-align: justify;
+    }
+    
+    .line {
+        margin: auto;
+        width: 100%;
+        border-bottom: 3px solid $logo-color;
+    }
+}
+
+.right-col::-webkit-scrollbar {
+    margin-top: 1rem;
+    width: 0.4rem;
+}
+
+.right-col::-webkit-scrollbar-track {
+    background: $bg-secondary;
+}
+
+.right-col::-webkit-scrollbar-thumb {
+    background: $logo-color;
+}
+
+.list-champions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.champion {
+    padding: 1rem;
+    list-style: none;
+    flex-grow: 1;
+    min-width: 15rem;
+    min-height: 15rem;
+    margin: 1rem;
+    background: $bg-primary;
+    border-radius: 1%;
+}
+
+ul {
+    margin: 0 !important;
+}
