@@ -16,6 +16,8 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -24,11 +26,11 @@ main {
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.4rem;
 }
 
 body::-webkit-scrollbar-track {
-    background: $text-primary;
+    background: $bg-secondary;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -62,20 +64,19 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: $text-primary;
-    transition: $transition-speed;
-    :not(.ionia-logo) {
-        filter: grayscale(100%) opacity(0.7);
-    }
+    transition: background $transition-speed, color $transition-speed;
+    filter: grayscale(100%) opacity(0.7);
 }
 
 .sidebar-link:hover {
-    :not(.ionia-logo) {
-        filter: grayscale(0%) opacity(1);
-    }
+    filter: grayscale(0%) opacity(1);
     background: $bg-secondary;
-    text-decoration: none !important;
-    color: $text-secondary;
+}
+
+.is-active {
+    // background: $bg-secondary;
+    border-right: 3px solid $logo-color;
+    filter: grayscale(0%) opacity(1);
 }
 
 .link-text {
@@ -89,6 +90,12 @@ body::-webkit-scrollbar-thumb {
         min-width: 1.5rem;
         margin: 0 1.5rem;
     }
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
     img {
         width: 3rem;
         min-width: 3rem;
@@ -98,11 +105,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fa-primary {
-    color: $logo-color;
+    color: $logo-color-secondary;
 }
 
 .fa-secondary {
-    color: $logo-color-secondary;
+    color: $logo-color;
 }
 
 .fa-primary,
@@ -115,8 +122,7 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
-    color: $text-secondary;
-    background: $bg-secondary;
+    background: $bg-primary;
     font-size: 1.5rem;
     letter-spacing: 0.3ch;
     width: 100%;
@@ -154,6 +160,10 @@ body::-webkit-scrollbar-thumb {
 
     main {
         margin: 0;
+    }
+
+    .sidebar-link:hover {
+        border-bottom: 2px $logo-color
     }
 }
 
