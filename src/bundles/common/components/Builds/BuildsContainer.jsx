@@ -2,13 +2,10 @@ import React from 'react';
 import Builds from './Builds'
 
 class BuildsContainer extends React.Component {
+    mockDatas = [];
     constructor(){
         super()
-        this.state = { champions: [] }
-    }
-
-    componentDidMount(){
-        this.setState({champions: [
+        this.mockDatas = [
             {"id":1,"name":"Akali"}, 
             {"id":2,"name":"Zed"}, 
             {"id":3,"name":"Blitzcrank"},
@@ -39,7 +36,12 @@ class BuildsContainer extends React.Component {
             {"id":28,"name":"Garen"},
             {"id":29,"name":"Ryze"},
             {"id":30,"name":"Ekko"}
-        ]
+        ];
+        this.state = { champions: [] }
+    }
+
+    componentDidMount(){
+        this.setState({champions: this.mockDatas
         })
     }
 

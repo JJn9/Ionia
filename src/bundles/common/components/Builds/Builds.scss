@@ -1,12 +1,26 @@
 @import '../../../../index.scss';
 
 
+.title2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.swords {
+    width: 5rem;
+    min-width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
 
 .left-col {
     .undertext {
         margin-top: 2rem;
         font-size: 2rem;
-        text-align: justify;
+        text-align: center;
     }
     
     .line {
@@ -45,6 +59,10 @@
     margin: 1rem;
     background: $bg-primary;
     border-radius: 1%;
+}
+
+.champion:hover {
+    border: solid 2px $logo-color;
 }
 
 ul {

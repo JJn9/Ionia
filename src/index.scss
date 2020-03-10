@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Sen:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Permanent+Marker|Sen:400,700,800&display=swap');
 
 $text-primary: #23232e;
 $text-secondary: #141418;
@@ -22,7 +22,6 @@ body {
 
 main {
     margin-left: 4.5rem;
-    padding: 1rem;
 }
 
 body::-webkit-scrollbar {
@@ -36,13 +35,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: $logo-color;
 }
-
-
-.title {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
 
 .sidebar {
     position: fixed;
@@ -80,9 +72,13 @@ body::-webkit-scrollbar-thumb {
     background: $bg-secondary;
 }
 
-.link-text {
-    display: none;
-    margin-left: 1rem;
+.link {
+    color: $text-primary;
+}
+
+.link:hover {
+    color: $text-secondary;
+    text-decoration: none;
 }
 
 .sidebar-link {
@@ -184,7 +180,7 @@ body::-webkit-scrollbar-thumb {
 
     .is-active {
         // background: $bg-secondary;
-        border-top: 3px solid $logo-color;
+        border-top: 4px solid $logo-color-secondary;
         filter: grayscale(0%) opacity(1);
     }
 }
@@ -202,12 +198,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     .left-col {
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     .right-col {
-        margin-top: 5rem;
-        max-height: 90vh;
+        margin-top: 2rem;
+        max-height: 95vh;
         overflow: auto;
     }
     
@@ -222,7 +218,7 @@ body::-webkit-scrollbar-thumb {
 
     .is-active {
         // background: $bg-secondary;
-        border-right: 3px solid $logo-color;
+        border-right: 4px solid $logo-color-secondary;
         filter: grayscale(0%) opacity(1);
     }
   }
@@ -275,7 +271,7 @@ body::-webkit-scrollbar-thumb {
 
     .is-active {
         // background: $bg-secondary;
-        border-top: 3px solid $logo-color;
+        border-top: 4px solid $logo-color-secondary;
         filter: grayscale(0%) opacity(1);
     }
 }
