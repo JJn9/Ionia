@@ -50,7 +50,7 @@ const routing = (
               </nav>
           <div  className="container-fluid vh-100">
             <div className="main">
-                <Route exact path="/ionia"><Redirect to="/ionia/home"/></Route>
+                <Route path="/ionia"><Redirect to="/ionia/home"/></Route>
                 <Route path="/ionia/home" component={Home}></Route>
                 <Route path="/ionia/builds" component={BuildsContainer}></Route>
             </div>

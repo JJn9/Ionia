@@ -17,15 +17,7 @@ class Builds extends React.Component {
                 </div>
                 <div className="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-xs-12 right-col">
                     <ul className="list-champions">
-                    {this.props.champions.map(
-                        champion => {
-                            return (
-                                <a href="#" className="link"  key={champion.id}>
-                                    <li className="champion text-center"><h2>{champion.name}</h2></li>
-                                </a>
-                            )
-                        }
-                    )}
+                        {this.props.champions}
                     </ul>
                 </div>
             </div>

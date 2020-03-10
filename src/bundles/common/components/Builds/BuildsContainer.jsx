@@ -5,7 +5,8 @@ class BuildsContainer extends React.Component {
     mockDatas = [];
     constructor(){
         super()
-        this.mockDatas = [
+        this.mockDatas = 
+        [
             {"id":1,"name":"Akali"}, 
             {"id":2,"name":"Zed"}, 
             {"id":3,"name":"Blitzcrank"},
@@ -36,13 +37,55 @@ class BuildsContainer extends React.Component {
             {"id":28,"name":"Garen"},
             {"id":29,"name":"Ryze"},
             {"id":30,"name":"Ekko"}
-        ];
-        this.state = { champions: [] }
+        ]
+        this.state = { 
+            isLoaded: false,
+            error: null,
+            champions: []
+        }
     }
 
     componentDidMount(){
-        this.setState({champions: this.mockDatas
-        })
+        // var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+        //     targetUrl = 'http://ddragon.leagueoflegends.com/cdn/9.3.1/data/en_US/champion.json'
+        // fetch(proxyUrl + targetUrl)
+        //     .then(res => res.json())
+        //     .then(
+        //         result => {
+        //             let champions = Object.keys(result.data).map(champ => {
+        //                 return (
+        //                     <a href="#" className="link"  key={champ.key}>
+        //                         <li className="champion text-center"><h2>{champ.id}</h2></li>
+        //                     </a>
+        //                 )
+        //             });
+        //             console.log(champions)
+        //             this.setState({
+        //                 isLoaded: true,
+        //                 champions: []
+        //             });
+        //         },
+
+        //         error => {
+        //             this.setState({
+        //                 isLoaded: true,
+        //                 error
+        //             });
+        //         }
+        //     )
+
+        var champions = this.mockDatas.map(champ => {
+            return (
+                <a href="#" className="link"  key={champ.id}>
+                    <li className="champion text-center"><h2>{champ.name}</h2></li>
+                </a>
+            )
+        });
+
+        this.setState({
+            isLoaded: true,
+            champions: champions
+        });
     }
 
     render() {
