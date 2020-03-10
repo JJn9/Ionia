@@ -77,7 +77,7 @@ class BuildsContainer extends React.Component {
 
         var champions = this.mockDatas.map(champ => {
             return (
-                <Link to={"/ionia/champions/" + champ.id} className="link"  key={champ.id}>
+                <Link to={"/builds/champions/" + champ.id} className="link"  key={champ.id}>
                     <li className="champion text-center"><h2>{champ.name}</h2></li>
                 </Link>
             )
