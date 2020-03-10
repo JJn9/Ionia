@@ -25,14 +25,14 @@ const routing = (
                       </li>
                       <OverlayTrigger placement='right' overlay={<Tooltip id="tooltip-right">Home</Tooltip>}>
                           <li className="sidebar-item">
-                              <NavLink activeClassName='is-active' to="/home" className="sidebar-link">
+                              <NavLink activeClassName='is-active' to="/ionia/home" className="sidebar-link">
                                   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home-heart" className="svg-inline--fa fa-home-heart fa-w-18" role="img" viewBox="0 0 576 512"><g className="fa-group"><path className="fa-secondary" fill="currentColor" d="M64.11 311.38V496a16.05 16.05 0 0 0 16 16h416a16.05 16.05 0 0 0 16-16V311.38c-6.7-5.5-44.7-38.31-224-196.4-180.11 158.9-217.6 191.09-224 196.4zm314.1-26.31a60.6 60.6 0 0 1 4.5 89.11L298 459.77a13.94 13.94 0 0 1-19.8 0l-84.7-85.59a60.66 60.66 0 0 1 4.3-89.11c24-20 59.7-16.39 81.6 5.81l8.6 8.69 8.6-8.69c22.01-22.2 57.71-25.81 81.61-5.81z" opacity="0.4"/><path className="fa-primary" fill="currentColor" d="M378.21 285.07c-23.9-20-59.6-16.39-81.6 5.81l-8.6 8.69-8.6-8.69c-21.9-22.2-57.6-25.81-81.6-5.81a60.66 60.66 0 0 0-4.3 89.11l84.7 85.59a13.94 13.94 0 0 0 19.8 0l84.7-85.59a60.6 60.6 0 0 0-4.5-89.11zm192.6-48.8l-58.7-51.79V48a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v51.7l-101.3-89.43a40 40 0 0 0-53.5 0l-256 226a16 16 0 0 0-1.2 22.61l21.4 23.8a16 16 0 0 0 22.6 1.2l229.4-202.2a16.12 16.12 0 0 1 21.2 0L528 284a16 16 0 0 0 22.6-1.21L572 259a16.11 16.11 0 0 0-1.19-22.73z"/></g></svg>
                               </NavLink>
                           </li>
                       </OverlayTrigger>
                       <OverlayTrigger placement='right' overlay={<Tooltip id="tooltip-right">Builds</Tooltip>}>
                           <li className="sidebar-item">
-                              <NavLink activeClassName='is-active' to="/builds" className="sidebar-link">
+                              <NavLink activeClassName='is-active' to="/ionia/builds" className="sidebar-link">
                                   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="books" className="svg-inline--fa fa-books fa-w-18" role="img" viewBox="0 0 576 512"><g className="fa-group"><path className="fa-secondary" fill="currentColor" d="M96 0H32A32 32 0 0 0 0 32v64h128V32A32 32 0 0 0 96 0zM0 384h128V128H0zm0 96a32 32 0 0 0 32 32h64a32 32 0 0 0 32-32v-64H0zm513.62-17.78L401.08 42.71l-60.26 16.14 112.35 418.8c.11.39.2.79.29 1.18l60.29-16.15c-.04-.15-.09-.3-.13-.46zM160 480a32 32 0 0 0 32 32h64a32 32 0 0 0 32-32v-64H160zM256 0h-64a32 32 0 0 0-32 32v64h124.79l-8-29.65a23.94 23.94 0 0 1 11.17-27V32A32 32 0 0 0 256 0zm-96 384h128V128H160z" opacity="0.4"/><path className="fa-primary" fill="currentColor" d="M0 416h128v-32H0zm0-288h128V96H0zm575.17 317.65L460.39 17.78a23.89 23.89 0 0 0-29.18-17h-.09L415.73 5a24 24 0 0 0-16.9 29.36l114.79 427.86a23.89 23.89 0 0 0 29.18 17h.09l15.38-4.22a24 24 0 0 0 16.9-29.35zM160 416h128v-32H160zM338.39 49.78a23.89 23.89 0 0 0-29.18-17h-.09L293.73 37a24 24 0 0 0-16.9 29.36l8 29.65H160v32h128V108l103.62 386.22a23.89 23.89 0 0 0 29.18 17h.09l15.38-4.22a24 24 0 0 0 16.9-29.33z"/></g></svg>
                               </NavLink>
                           </li>
@@ -40,9 +40,9 @@ const routing = (
                   </ul>
               </nav>
           <div  className="container-fluid vh-100">
-            <Route exact path="/"><Redirect to="/home"/></Route>
-            <Route path="/home" component={Home}></Route>
-            <Route path="/builds" component={BuildsContainer}></Route>
+            <Route exact path="/ionia"><Redirect to="/ionia/home"/></Route>
+            <Route path="/ionia/home" component={Home}></Route>
+            <Route path="/ionia/builds" component={BuildsContainer}></Route>
           </div>
       </div>
     </Router>
