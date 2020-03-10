@@ -1,0 +1,63 @@
+@import '../../../../index.scss';
+
+.footer {
+    width: 100vw;
+    background-color: $icons-secondary;
+}
+
+.items {
+    display: flex;
+    direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    .col1 {
+        margin-right: auto !important;
+        .social-icon {
+            margin: 0.5rem;
+            transition: color $transition-speed;
+            svg {
+                width: 2rem;
+            }
+            path {
+                color: $icons-third;
+            }
+        }
+    
+        .social-icon:hover path{
+            color: $logo-color;
+        }
+    }
+    .col2 {
+        margin-left: auto;
+        margin-right: auto;
+        .footer-logo {
+            img {
+                width: 6rem;
+            }
+        }
+    }
+    .col3 {
+        margin-left: auto !important;
+        .social-icon {
+            margin: 0.5rem;
+            transition: color $transition-speed;
+            svg {
+                width: 2rem;
+            }
+            path {
+                color: $icons-third;
+            }
+        }
+    
+        .social-icon:hover path{
+            color: $logo-color;
+        }
+    }
+}

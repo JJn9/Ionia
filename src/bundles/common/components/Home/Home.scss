@@ -16,7 +16,10 @@
     text-transform: uppercase;
 }
 
+
 .home {
-    padding: 3rem;
-    background-color: $logo-color;
+   text-align: center;
+    svg {
+        width: 50rem;
+    }
 }

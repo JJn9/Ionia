@@ -2,26 +2,26 @@
 
 $text-primary: #23232e;
 $text-secondary: #141418;
-$bg-primary: #ececec;
-$bg-secondary: #c5c5c5;
+$icons-primary: #ffffff;
+$icons-secondary: #dddddd;
+$icons-third: #bbbbbb;
 $logo-color: #44C688;
 $logo-color-secondary: #38a771;
 $transition-speed: 600ms;
 
 body {
-    font-size: 16px !important;
+    font-size: 1rem !important;
     font-family: 'Sen', sans-serif;
     color: black;
     background-color: white;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-    margin-left: 4.5rem;
+    a:hover {
+        cursor: pointer;
+    }
 }
 
 body::-webkit-scrollbar {
@@ -29,16 +29,35 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: $bg-secondary;
+    background: $icons-primary;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: $logo-color;
+    background: $logo-color-secondary;
+}
+
+.link {
+    color: $text-primary;
+    text-decoration:none;
+}
+
+.link:hover {
+    color: $text-secondary;
+    text-decoration:none;
+}
+
+.main {
+    margin-top: 4.5rem;
+    height: 100%;
 }
 
 .sidebar {
     position: fixed;
-    background-color: $bg-primary;
+    top: 0;
+    width: 100vw;
+    height: 4.5rem;
+    z-index: 9999;
+    background-color: $logo-color;
 }
   
 .sidebar-nav {
@@ -46,39 +65,32 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: 100%;
 }
 
 .sidebar-item {
-    width: 100%;
+    height: 100%;
 }
 
-// .sidebar-item:last-child {
-//     margin-top: auto;
-// }
+.sidebar-item:last-child {
+    margin-left: auto;
+}
 
 .sidebar-link {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 100%;
+    width: 5rem;
     transition: background $transition-speed, color $transition-speed;
     filter: grayscale(100%) opacity(0.7);
+    justify-content: center;
 }
 
 .sidebar-link:hover {
     filter: grayscale(0%) opacity(1);
-    background: $bg-secondary;
-}
-
-.link {
-    color: $text-primary;
-}
-
-.link:hover {
-    color: $text-secondary;
-    text-decoration: none;
+    background: $logo-color-secondary;
 }
 
 .sidebar-link {
@@ -92,7 +104,8 @@ body::-webkit-scrollbar-thumb {
 .logo-link {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 100%;
+    width: 6rem;
     img {
         width: 3rem;
         min-width: 3rem;
@@ -102,11 +115,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fa-primary {
-    color: $logo-color-secondary;
+    color: $icons-primary;
 }
 
 .fa-secondary {
-    color: $logo-color;
+    color: $icons-secondary;
 }
 
 .fa-primary,
@@ -114,15 +127,8 @@ body::-webkit-scrollbar-thumb {
     transition: $transition-speed;
 }
 
-.logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-    background: $bg-primary;
-    font-size: 1.5rem;
-    letter-spacing: 0.3ch;
-    width: 100%;
+.logo { 
+    height: 100%;
 }
 
 
@@ -137,29 +143,15 @@ body::-webkit-scrollbar-thumb {
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-    .sidebar {
-        bottom: 0;
-        width: 100vw;
-        height: 4.5rem;
-    }
-
     .logo {
         display: none;
-    }
-
-    .sidebar-nav {
-        flex-direction: row;
-    }
-
-    .sidebar-link {
-        justify-content: center;
     }
 
     .list-champions {
         padding-inline-start: 0 !important;
     }
 
-    main {
+    .main {
         margin-left: 0;
     }
 
@@ -169,33 +161,28 @@ body::-webkit-scrollbar-thumb {
     }
 
     .right-col {
-        max-height: 60vh !important;
+        max-height: 30vh !important;
         margin-top: 2rem;
         overflow: auto;
     }
 
-    .sidebar-link:hover {
-        border-bottom: 2px $logo-color
+    .is-active {
+        // background: $icons-secondary;
+        background-color: $logo-color-secondary;        
+        filter: grayscale(0%) opacity(1);
     }
 
-    .is-active {
-        // background: $bg-secondary;
-        border-top: 4px solid $logo-color-secondary;
-        filter: grayscale(0%) opacity(1);
+    .footer {
+        display: none !important;
+    }
+    .home {
+        width: 100vw;
+        padding: 2rem;
     }
 }
 
 /* Large screens */
-@media only screen and (min-width: 800px) {
-    .sidebar {
-        top: 0;
-        width: 4.5rem;
-        height: 100vh;
-    }
-
-    .sidebar:hover .link-text {
-        display: inline;
-    }
+@media only screen and (min-width: 1025px) {
 
     .left-col {
         margin-top: 2rem;
@@ -211,32 +198,28 @@ body::-webkit-scrollbar-thumb {
         padding-inline-start: 0 !important;
     }
 
-    .sidebar:hover .logo-text
-    {
-        left: 0px;
-    }
-
     .is-active {
-        // background: $bg-secondary;
-        border-right: 4px solid $logo-color-secondary;
+        // background: $icons-secondary;
+        background-color: $logo-color-secondary;
         filter: grayscale(0%) opacity(1);
     }
+
+    
+    .main {
+        margin-top: 4.5rem;
+    }
+
+    .home {
+        width: 96vw;
+        padding: 3rem;
+    }
+
   }
 
   /*medium screens*/
-  @media only screen and (max-width: 800px) {
-    .sidebar {
-        bottom: 0;
-        width: 100vw;
-        height: 4.5rem;
-    }
-
+  @media only screen and (min-width: 600px) and (max-width: 1024px){
     .logo {
         display: none;
-    }
-
-    .sidebar-nav {
-        flex-direction: row;
     }
 
     .sidebar-link {
@@ -247,7 +230,7 @@ body::-webkit-scrollbar-thumb {
         padding-inline-start: 0 !important;
     }
 
-    main {
+    .main {
         margin-left: 0;
         margin-bottom: 0;
     }
@@ -265,13 +248,22 @@ body::-webkit-scrollbar-thumb {
     }
 
     .sidebar-link:hover {
-        border-bottom: 2px $logo-color;
+        border-bottom: 2px $icons-primary;
         border-right: none;
     }
 
     .is-active {
-        // background: $bg-secondary;
-        border-top: 4px solid $logo-color-secondary;
+        // background: $icons-secondary;
+        background-color: $logo-color-secondary;        
         filter: grayscale(0%) opacity(1);
+    }
+
+    .footer {
+        display: none !important;
+    }
+
+    .home {
+        width: 100vw;
+        padding: 2rem;
     }
 }
