@@ -1,5 +1,6 @@
 import React from 'react';
 import Builds from './Builds'
+import { Link } from 'react-router-dom';
 
 class BuildsContainer extends React.Component {
     mockDatas = [];
@@ -76,9 +77,9 @@ class BuildsContainer extends React.Component {
 
         var champions = this.mockDatas.map(champ => {
             return (
-                <a href="#" className="link"  key={champ.id}>
+                <Link to={"/ionia/champions/" + champ.id} className="link"  key={champ.id}>
                     <li className="champion text-center"><h2>{champ.name}</h2></li>
-                </a>
+                </Link>
             )
         });
 

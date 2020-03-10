@@ -13,6 +13,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import { Home } from './bundles/common/components/Home';
 import { BuildsContainer } from './bundles/common/components/Builds/index';
 import { Footer } from './bundles/common/components/Footer';
+import { ChampionDetailsContainer } from './bundles/common/components/Builds/ChampionDetails/';
 
 
 const routing = (
@@ -53,6 +54,7 @@ const routing = (
                 <Route path="/ionia"><Redirect to="/ionia/home"/></Route>
                 <Route path="/ionia/home" component={Home}></Route>
                 <Route path="/ionia/builds" component={BuildsContainer}></Route>
+                <Route path="/ionia/champions/:id" component={ChampionDetailsContainer}></Route>
             </div>
           </div>
           <Footer /> 
