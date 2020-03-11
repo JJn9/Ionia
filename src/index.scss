@@ -35,6 +35,7 @@ body {
         text-decoration: none;
         color: $logo-color-secondary;
     }
+    textarea, select, input, button { outline: none; }
 }
 
 body::-webkit-scrollbar {
@@ -73,6 +74,9 @@ body::-webkit-scrollbar-thumb {
     height: 4.5rem;
     z-index: 9999;
     background-color: #F2F5F5;
+    // -webkit-box-shadow: 0px 5px 32px -6px rgba(0,0,0,0.43);
+    // -moz-box-shadow: 0px 5px 32px -6px rgba(0,0,0,0.43);
+    // box-shadow: 0px 5px 32px -6px rgba(0,0,0,0.43);
 }
   
 .sidebar-nav {
@@ -188,10 +192,6 @@ body::-webkit-scrollbar-thumb {
         display:none !important;
     }
 
-    .head-build {
-        display: none !important;
-    }
-
     .sidebar-nav {
         padding-left: 0;
         padding-right: 0;
@@ -221,6 +221,41 @@ body::-webkit-scrollbar-thumb {
             margin-left: auto;
             margin-right: auto;
             margin-top: 2rem;
+        }
+    }
+
+    .input-col {
+        height: 40rem;
+        width: 100vw;
+        flex-direction: column;
+        padding-top: 14rem;
+        padding-bottom: 14rem;
+        .input-wrapper{
+            flex-direction: column;
+        }
+        #profile-selector {
+            padding: 0.5rem;
+            margin: auto;
+            border: 2px solid $logo-color;
+            border-radius: 10rem;
+            width: 15rem;
+            height: 2rem;
+            font-size: 1rem;
+        }
+        .above-input {
+            width: 100vw;
+            font-size: 2rem;
+        }
+        #submit {
+            padding: 0.5rem;
+            text-align: center;
+            margin-left: 4rem;
+            width: 6rem;
+            height: 3rem;
+            border-radius: 10rem;
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            margin: auto;
         }
     }
 }
@@ -307,19 +342,6 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    .head-build {
-        height: 10rem;
-        width: 100vw;
-        background-color: #F2F5F5;
-    
-        .title-build {
-            width: 100%;
-            color: $text-primary;
-            font-size: 2rem;
-            letter-spacing: 1rem;
-        }
-    }
-
     .champion-nami {
         z-index: 0;
         position: absolute;
@@ -339,5 +361,34 @@ body::-webkit-scrollbar-thumb {
     .sidebar-nav {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .input-col {
+        height: 40rem;
+        width: 100vw;
+        flex-direction: column;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        #profile-selector {
+            padding: 2rem;
+            margin: auto;
+            border: 2px solid $logo-color;
+            border-radius: 10rem;
+            width: 30rem;
+            height: 4rem;
+            font-size: 1.5rem;
+        }
+        .above-input {
+            width: 60vw;
+            font-size: 3rem;
+        }
+        #submit {
+            text-align: center;
+            margin-left: 4rem;
+            width: 8rem;
+            height: 4rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.2rem;
+        }
     }
 }

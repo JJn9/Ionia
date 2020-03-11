@@ -6,13 +6,6 @@ class Builds extends React.Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-lg-12 col-sm-12 col-xs-12 d-flex align-items-center head-build">
-                        <div className="title-build text-center">
-                            <span>Builds Helper.</span>   
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
                     <div className="col-xl-1 col-lg-12 col-md-12 col-sm-12 col-xs-12 mr-5 ml-5 left-col">
                         <h1 className="text-center mt-3 title2">Select a champion</h1>
                         <div className="line"></div>

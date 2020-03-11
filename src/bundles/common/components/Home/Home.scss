@@ -18,7 +18,7 @@
     z-index: 0;
     position: absolute;
     left: 20%;
-    top: 40%;
+    top: 42%;
     width: 17rem;
 }
 
@@ -29,4 +29,45 @@
     left: 70%;
     width: 17rem;
 }
+
+
+.input-col {
+    height: 40rem;
+    width: 100vw;
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    #profile-selector {
+        padding: 2rem;
+        margin: auto;
+        border: 2px solid $logo-color;
+        border-radius: 10rem;
+        width: 35rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+    .above-input {
+        width: 30vw;
+        font-size: 3rem;
+    }
+    #submit {
+        text-align: center;
+        margin-left: 4rem;
+        width: 8rem;
+        height: 4rem;
+        background-color: white;
+        border: 2px solid $logo-color;
+        border-radius: 10rem;
+        text-transform: uppercase;
+        transition: color $transition-speed, background-color $transition-speed;
+        outline: none;
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+    #submit:hover {
+        color: white;
+        background-color: $logo-color;
+    }
+}
+
 
