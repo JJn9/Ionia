@@ -32,7 +32,7 @@
 
 
 .input-col {
-    height: 40rem;
+    height: 30rem;
     width: 100vw;
     flex-direction: column;
     padding-top: 10rem;
@@ -69,6 +69,23 @@
     #submit:hover svg{
         filter: grayscale(0%) opacity(1);
     }
+}
+
+.underinput-col {
+    height: 15rem;
+    width: 100vw;
+    background-color: #F2F5F5;
+    .column-direction{
+        flex-direction: column;
+        #col-title {
+            margin-top: 2rem;
+        }
+        svg {
+            min-width: 5rem;
+            width: 5rem;
+        }
+    }
+
 }
 
 

@@ -52,7 +52,7 @@ const routing = (
                         </li>
                   </ul>
               </nav>
-          <div  className="container-fluid" id="container">
+          <div  className="container-fluid vw-100" id="container">
             <div className="main">
                 <Switch>
                     <Route path="/" exact component={Home}></Route>
