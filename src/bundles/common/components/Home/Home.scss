@@ -6,10 +6,27 @@
     background-color: #F2F5F5;
 
     .title {
+        z-index: 9999;
         width: 100%;
         color: $text-primary;
         font-size: 5rem;
         letter-spacing: 1rem;
     }
+}
+
+.champion-nami {
+    z-index: 0;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    width: 17rem;
+}
+
+.champion-ashe {
+    z-index: 0;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    width: 17rem;
 }
 

@@ -1,5 +1,8 @@
 import React from 'react';
 import './Home.scss';
+import Nami from '../../../assets/images/nami.png'
+import Ashe from '../../../assets/images/ashe.png'
+
 
 class Home extends React.Component {
     render() {
@@ -9,6 +12,8 @@ class Home extends React.Component {
                     <div className="title text-center">
                         <span>Track your stats, anytime, anywhere.</span>   
                     </div>
+                    <img src={Nami} alt="" className="champion-nami"></img>
+                    <img src={Ashe} alt="" className="champion-ashe"></img>
                 </div>
             </div>
         )
