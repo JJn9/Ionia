@@ -1,25 +1,15 @@
 @import '../../../../index.scss';
 
-.title1 {
-    color: white;
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 1rem;
-    font-size: 5rem;
-    text-transform: uppercase;
-}
+.head {
+    height: 25rem;
+    width: 100vw;
+    background-color: #F2F5F5;
 
-.title-main {
-    color: white;
-    font-family: 'Permanent Marker', cursive;
-    letter-spacing: 2rem;
-    font-size: 7rem;
-    text-transform: uppercase;
-}
-
-
-.home {
-   text-align: center;
-    svg {
-        width: 50rem;
+    .title {
+        width: 100%;
+        color: $text-primary;
+        font-size: 5rem;
+        letter-spacing: 1rem;
     }
 }
+

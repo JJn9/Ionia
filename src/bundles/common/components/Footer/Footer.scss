@@ -1,8 +1,10 @@
 @import '../../../../index.scss';
 
 .footer {
+    position: absolute;
+    bottom: 0;
     width: 100vw;
-    background-color: $icons-secondary;
+    background-color: $logo-third;
 }
 
 .items {
@@ -26,12 +28,12 @@
                 width: 2rem;
             }
             path {
-                color: $icons-third;
+                color: white;
             }
         }
     
         .social-icon:hover path{
-            color: $logo-color;
+            color: $icons-third;
         }
     }
     .col2 {
@@ -52,12 +54,12 @@
                 width: 2rem;
             }
             path {
-                color: $icons-third;
+                color: white;
             }
         }
     
         .social-icon:hover path{
-            color: $logo-color;
+            color: $icons-third;
         }
     }
 }

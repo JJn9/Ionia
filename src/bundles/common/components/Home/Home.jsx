@@ -5,8 +5,10 @@ class Home extends React.Component {
     render() {
         return (
             <div className="row">
-                <div className="col-lg-12 col-sm-12 col-xs-12 text-center">
-                    <h1>Home !</h1>
+                <div className="col-lg-12 col-sm-12 col-xs-12 d-flex align-items-center head">
+                    <div className="title text-center">
+                        <span>Track your stats, anytime, anywhere.</span>   
+                    </div>
                 </div>
             </div>
         )

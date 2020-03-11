@@ -7,9 +7,20 @@ $icons-secondary: #dddddd;
 $icons-third: #bbbbbb;
 $logo-color: #44C688;
 $logo-color-secondary: #38a771;
+$logo-third: #1d6945;
 $transition-speed: 600ms;
 
+html {
+    height: 100%;
+
+    #root {
+        min-height: 100vh;
+    }
+}
+
 body {
+    position: relative;
+    min-height: 100vh;
     font-size: 1rem !important;
     font-family: 'Sen', sans-serif;
     color: black;
@@ -21,6 +32,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     a:hover {
         cursor: pointer;
+        text-decoration: none;
+        color: $logo-color-secondary;
     }
 }
 
@@ -36,19 +49,21 @@ body::-webkit-scrollbar-thumb {
     background: $logo-color-secondary;
 }
 
-.link {
-    color: $text-primary;
-    text-decoration:none;
+#container {
+    min-height: 100%;
 }
 
-.link:hover {
-    color: $text-secondary;
+.link {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $logo-color;
     text-decoration:none;
+    letter-spacing: 0.1rem;
 }
 
 .main {
     margin-top: 4.5rem;
-    height: 100%;
 }
 
 .sidebar {
@@ -57,25 +72,23 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
     height: 4.5rem;
     z-index: 9999;
-    background-color: $logo-color;
+    background-color: #F2F5F5;
 }
   
 .sidebar-nav {
     list-style: none;
-    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
+    justify-content: space-evenly;
+    padding-left: 35rem;
+    padding-right: 35rem;
 }
 
 .sidebar-item {
     height: 100%;
-}
-
-.sidebar-item:last-child {
-    margin-left: auto;
 }
 
 .sidebar-link {
@@ -84,21 +97,11 @@ body::-webkit-scrollbar-thumb {
     height: 100%;
     width: 5rem;
     transition: background $transition-speed, color $transition-speed;
-    filter: grayscale(100%) opacity(0.7);
     justify-content: center;
 }
 
-.sidebar-link:hover {
-    filter: grayscale(0%) opacity(1);
-    background: $logo-color-secondary;
-}
-
-.sidebar-link {
-    svg {
-        width: 1.5rem;
-        min-width: 1.5rem;
-        margin: 0 1.5rem;
-    }
+.sidebar-link:hover .link{
+    color: $logo-color-secondary;
 }
 
 .logo-link {
@@ -122,16 +125,6 @@ body::-webkit-scrollbar-thumb {
     color: $icons-secondary;
 }
 
-.fa-primary,
-.fa-secondary {
-    transition: $transition-speed;
-}
-
-.logo { 
-    height: 100%;
-}
-
-
 .logo-text
 {
     display: inline;
@@ -141,8 +134,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+.is-active {
+    // background: $icons-secondary;
+    border-bottom: 3px solid $logo-color-secondary;
+}
+
+.is-active span{
+    // background: $icons-secondary;
+    color: $logo-color-secondary;
+}
+
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
+    body {
+        min-width: 100vw;
+    }
     .logo {
         display: none;
     }
@@ -153,23 +160,17 @@ body::-webkit-scrollbar-thumb {
 
     .main {
         margin-left: 0;
+        padding-bottom: 0;
     }
 
     .left-col {
-        margin-top: 0;
-        margin-right: 0;
+        margin-top: 3rem;
     }
 
     .right-col {
-        max-height: 30vh !important;
-        margin-top: 2rem;
+        max-height: 55vh !important;
+        margin-top: 1rem;
         overflow: auto;
-    }
-
-    .is-active {
-        // background: $icons-secondary;
-        background-color: $logo-color-secondary;        
-        filter: grayscale(0%) opacity(1);
     }
 
     .footer {
@@ -178,6 +179,42 @@ body::-webkit-scrollbar-thumb {
     .home {
         width: 100vw;
         padding: 2rem;
+    }
+
+    .head {
+        display:none !important;
+    }
+
+    .sidebar-nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .left-col {
+        .undertext {
+            margin-top: 2rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .line {
+            margin: auto;
+            width: 100%;
+            border-bottom: 3px solid $logo-color;
+        }
+        .title2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .swords {
+            width: 3rem;
+            min-width: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -190,23 +227,16 @@ body::-webkit-scrollbar-thumb {
 
     .right-col {
         margin-top: 2rem;
-        max-height: 95vh;
+        max-height: 100%;
         overflow: auto;
     }
     
     .list-champions {
         padding-inline-start: 0 !important;
     }
-
-    .is-active {
-        // background: $icons-secondary;
-        background-color: $logo-color-secondary;
-        filter: grayscale(0%) opacity(1);
-    }
-
     
     .main {
-        margin-top: 4.5rem;
+        padding-bottom: 10rem;
     }
 
     .home {
@@ -233,6 +263,7 @@ body::-webkit-scrollbar-thumb {
     .main {
         margin-left: 0;
         margin-bottom: 0;
+        padding-bottom: 4rem;
     }
 
     .left-col {
@@ -247,17 +278,6 @@ body::-webkit-scrollbar-thumb {
         overflow: auto;
     }
 
-    .sidebar-link:hover {
-        border-bottom: 2px $icons-primary;
-        border-right: none;
-    }
-
-    .is-active {
-        // background: $icons-secondary;
-        background-color: $logo-color-secondary;        
-        filter: grayscale(0%) opacity(1);
-    }
-
     .footer {
         display: none !important;
     }
@@ -265,5 +285,23 @@ body::-webkit-scrollbar-thumb {
     .home {
         width: 100vw;
         padding: 2rem;
+    }
+
+    .head {
+        height: 10rem;
+        width: 100vw;
+        background-color: #F2F5F5;
+    
+        .title {
+            width: 100%;
+            color: $text-primary;
+            font-size: 4rem;
+            letter-spacing: 1rem;
+        }
+    }
+
+    .sidebar-nav {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

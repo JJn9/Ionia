@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss';
-import Ionia from '../../../assets/images/Ionia.png';
+import Ionia from '../../../assets/images/Ionia-white.png';
 
 
 class Footer extends React.Component {
