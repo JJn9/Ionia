@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/Ionia/static/css/main.65ea3647.chunk.css",
-    "main.js": "/Ionia/static/js/main.3f22f99a.chunk.js",
-    "main.js.map": "/Ionia/static/js/main.3f22f99a.chunk.js.map",
-    "runtime-main.js": "/Ionia/static/js/runtime-main.258cadee.js",
-    "runtime-main.js.map": "/Ionia/static/js/runtime-main.258cadee.js.map",
-    "static/css/2.de424728.chunk.css": "/Ionia/static/css/2.de424728.chunk.css",
-    "static/js/2.be16c804.chunk.js": "/Ionia/static/js/2.be16c804.chunk.js",
-    "static/js/2.be16c804.chunk.js.map": "/Ionia/static/js/2.be16c804.chunk.js.map",
-    "index.html": "/Ionia/index.html",
-    "precache-manifest.9bbe9a56b9f14b4f1af51d1b8a4cc31b.js": "/Ionia/precache-manifest.9bbe9a56b9f14b4f1af51d1b8a4cc31b.js",
-    "service-worker.js": "/Ionia/service-worker.js",
-    "static/css/2.de424728.chunk.css.map": "/Ionia/static/css/2.de424728.chunk.css.map",
-    "static/css/main.65ea3647.chunk.css.map": "/Ionia/static/css/main.65ea3647.chunk.css.map",
-    "static/js/2.be16c804.chunk.js.LICENSE.txt": "/Ionia/static/js/2.be16c804.chunk.js.LICENSE.txt",
-    "static/media/Ionia-white.png": "/Ionia/static/media/Ionia-white.f90ee299.png",
-    "static/media/Ionia.png": "/Ionia/static/media/Ionia.9cfa4e4f.png"
+    "main.css": "/static/css/main.65ea3647.chunk.css",
+    "main.js": "/static/js/main.2c87ebd2.chunk.js",
+    "main.js.map": "/static/js/main.2c87ebd2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6678480c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6678480c.js.map",
+    "static/css/2.de424728.chunk.css": "/static/css/2.de424728.chunk.css",
+    "static/js/2.be16c804.chunk.js": "/static/js/2.be16c804.chunk.js",
+    "static/js/2.be16c804.chunk.js.map": "/static/js/2.be16c804.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1dd7027e94e26687290435411aacab7f.js": "/precache-manifest.1dd7027e94e26687290435411aacab7f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/static/css/2.de424728.chunk.css.map",
+    "static/css/main.65ea3647.chunk.css.map": "/static/css/main.65ea3647.chunk.css.map",
+    "static/js/2.be16c804.chunk.js.LICENSE.txt": "/static/js/2.be16c804.chunk.js.LICENSE.txt",
+    "static/media/Ionia-white.png": "/static/media/Ionia-white.f90ee299.png",
+    "static/media/Ionia.png": "/static/media/Ionia.9cfa4e4f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.258cadee.js",
+    "static/js/runtime-main.6678480c.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.be16c804.chunk.js",
     "static/css/main.65ea3647.chunk.css",
-    "static/js/main.3f22f99a.chunk.js"
+    "static/js/main.2c87ebd2.chunk.js"
   ]
 }
