@@ -8,7 +8,7 @@ $icons-third: #bbbbbb;
 $logo-color: #44C688;
 $logo-color-secondary: #38a771;
 $logo-third: #1d6945;
-$transition-speed: 600ms;
+$transition-speed: 400ms;
 
 html {
     height: 100%;
@@ -57,7 +57,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Bebas Neue', cursive;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: $logo-color;
+    color: $text-primary;
     text-decoration:none;
     letter-spacing: 0.1rem;
 }
@@ -96,12 +96,15 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     height: 100%;
     width: 5rem;
-    transition: background $transition-speed, color $transition-speed;
     justify-content: center;
+    .link {
+        transition: color $transition-speed;
+    }
 }
 
+
 .sidebar-link:hover .link{
-    color: $logo-color-secondary;
+    color: $logo-color;
 }
 
 .logo-link {
@@ -136,12 +139,12 @@ body::-webkit-scrollbar-thumb {
 
 .is-active {
     // background: $icons-secondary;
-    border-bottom: 1.3px solid $logo-color-secondary;
+    border-bottom: 1.5px solid $logo-color;
 }
 
 .is-active span{
     // background: $icons-secondary;
-    color: $logo-color-secondary;
+    color: $text-secondary;
 }
 
 

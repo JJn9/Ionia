@@ -3,20 +3,19 @@
 .footer {
     position: absolute;
     bottom: 0;
+    height: 5rem;
     width: 100vw;
-    background-color: $logo-third;
+    background-color: $logo-color;
 }
 
 .items {
     display: flex;
     direction: row;
-    align-items: center;
     padding: 0.5rem;
     padding-left: 50rem;
     padding-right: 50rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    text-align: center;
     list-style: none;
     width: 100%;
     .col1 {
@@ -33,16 +32,7 @@
         }
     
         .social-icon:hover path{
-            color: $icons-third;
-        }
-    }
-    .col2 {
-        margin-left: auto;
-        margin-right: auto;
-        .footer-logo {
-            img {
-                width: 6rem;
-            }
+            color: $text-primary;
         }
     }
     .col3 {
@@ -59,7 +49,7 @@
         }
     
         .social-icon:hover path{
-            color: $icons-third;
+            color: $text-primary;
         }
     }
 }
