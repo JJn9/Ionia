@@ -39,12 +39,16 @@
             margin-left: 1rem;
             margin-bottom: 2rem;
             height: 2rem;
+            .help-link {
+                text-decoration: none;
+                color: $text-primary;
+            }
         }
     }
 }
 
-.active {
-    color: $logo-color;
+.active a{
+    color: $logo-color !important;
 }
 
 .active::before {

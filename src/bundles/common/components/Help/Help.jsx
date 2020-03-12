@@ -8,7 +8,7 @@ class Help extends React.Component {
                 <div className="row">
                     <div className="content-col">
                         <div className="help-card">
-                            <div id="section1">
+                            <section id="section1">
                                 <h1>About Ionia</h1>
                                 <div className="subtitle-line"></div>
                                 <p className="content-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -51,9 +51,9 @@ class Help extends React.Component {
                                     Rem perspiciatis distinctio quae aliquid non cumque laudantium, 
                                     omnis eveniet consectetur, voluptatibus quis dolor officiis, 
                                     repellendus maxime veritatis dolore numquam minus saepe.</p> 
-                            </div>
+                            </section>
                             
-                            <div id="section2">
+                            <section id="section2">
                                 <h1>About me</h1>
                                 <div className="subtitle-line"></div>
                                 <p className="content-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -96,9 +96,9 @@ class Help extends React.Component {
                                     Rem perspiciatis distinctio quae aliquid non cumque laudantium, 
                                     omnis eveniet consectetur, voluptatibus quis dolor officiis, 
                                     repellendus maxime veritatis dolore numquam minus saepe.</p> 
-                            </div>
+                            </section>
 
-                            <div id="section3">
+                            <section id="section3">
                                 <h1>Contributing</h1>
                                 <div className="subtitle-line"></div>
                                 <p className="content-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -141,19 +141,19 @@ class Help extends React.Component {
                                     Rem perspiciatis distinctio quae aliquid non cumque laudantium, 
                                     omnis eveniet consectetur, voluptatibus quis dolor officiis, 
                                     repellendus maxime veritatis dolore numquam minus saepe.</p> 
-                            </div>
+                            </section>
                         </div>
                     </div>
                     <div className="menu-col">
-                        <Scrollspy items={ ['section1', 'section2', 'section3'] } offset={ 0 } currentClassName="active"  className="menu">
-                            <li className="menu-item" href="#section1">
-                                About Ionia
+                        <Scrollspy items={ ['section1', 'section2', 'section3'] } offset={ -100 } currentClassName="active"  className="menu">
+                            <li className="menu-item">
+                                <a href="help/#section1" className="help-link">About Ionia</a>
                             </li>
-                            <li className="menu-item" href="#section2">
-                                About me
+                            <li className="menu-item">
+                                <a href="help/#section2" className="help-link">About me</a>
                             </li>
-                            <li className="menu-item" href="#section3">
-                                Contributing
+                            <li className="menu-item">
+                                <a href="help/#section3" className="help-link">Contributing</a>
                             </li>
                         </Scrollspy>
                     </div>
