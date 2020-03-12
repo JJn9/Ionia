@@ -61,5 +61,4 @@ class ChampionDetailsContainer extends React.Component {
         return <ChampionDetails champion={this.state.champion} />
     }
 }
-
 export default ChampionDetailsContainer

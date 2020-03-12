@@ -1,0 +1,51 @@
+@import '../../../../index.scss';
+
+
+.content-col {
+    padding-top: 5rem;
+    max-width: 80%;
+    .help-card {
+        height: 100%;
+        margin-left: 30em;
+        .content-test{
+            margin-bottom: 5rem;
+            line-height: 2rem;
+        }
+        .subtitle-line {
+            width: 20rem;
+            border-bottom: 2px solid $logo-color;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+.menu-col {
+    padding-top: 5rem;
+    width: 20%;
+    .menu {
+        padding-left: 7rem;
+        height: 100%;
+        position: fixed;
+        text-align: justify;
+        list-style: none;
+        font-size: 1.5rem;
+        .menu-item {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.active {
+    color: $logo-color;
+}
+
+.active::before {
+    content: '';
+    margin-right: 1rem;
+    border-left: 2px solid $logo-color;
+}
+
+
+

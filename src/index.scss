@@ -11,7 +11,7 @@ $logo-third: #1d6945;
 $transition-speed: 400ms;
 
 html {
-    height: 100%;
+    height: 100vh;
 
     #root {
         min-height: 100vh;
@@ -20,7 +20,6 @@ html {
 
 body {
     position: relative;
-    min-height: 100vh;
     font-size: 1rem !important;
     font-family: 'Sen', sans-serif;
     color: black;
@@ -51,7 +50,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #container {
-    min-height: 100%;
+    height: 100%;
+    margin-top: 4.5rem;
 }
 
 .link {
@@ -63,9 +63,6 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 0.1rem;
 }
 
-.main {
-    margin-top: 4.5rem;
-}
 
 .sidebar {
     position: fixed;
@@ -277,10 +274,6 @@ body::-webkit-scrollbar-thumb {
         padding-inline-start: 0 !important;
     }
     
-    .main {
-        padding-bottom: 5rem;
-    }
-
     .home {
         width: 96vw;
         padding: 3rem;

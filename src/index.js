@@ -14,7 +14,8 @@ import { Home } from './bundles/common/components/Home';
 import { BuildsContainer } from './bundles/common/components/Builds/index';
 import { Footer } from './bundles/common/components/Footer';
 import { ChampionDetailsContainer } from './bundles/common/components/Builds/ChampionDetails';
-import { notFound } from '../src/bundles/common/components/404notfound'
+import { notFound } from '../src/bundles/common/components/404notfound';
+import { Help } from '../src/bundles/common/components/Help';
 
 
 const routing = (
@@ -52,15 +53,14 @@ const routing = (
                         </li>
                   </ul>
               </nav>
-          <div  className="container-fluid vw-100" id="container">
-            <div className="main">
-                <Switch>
-                    <Route path="/" exact component={Home}></Route>
-                    <Route path="/builds" exact component={BuildsContainer}></Route>
-                    <Route path="/builds/champions/:id" component={ChampionDetailsContainer}></Route>
-                    <Route component={notFound} />
-                </Switch>
-            </div>
+          <div  id="container">
+            <Switch>
+                <Route path="/" exact component={Home}></Route>
+                <Route path="/builds" exact component={BuildsContainer}></Route>
+                <Route path="/builds/champions/:id" component={ChampionDetailsContainer}></Route>
+                <Route path="/help" component={Help}></Route>
+                <Route component={notFound} />
+            </Switch>
           </div>
           <Footer /> 
     </Router>
