@@ -2,12 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import { Route, NavLink, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Ionia from './bundles/assets/images/Ionia.png';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
 
 //Components
 import { Home } from './bundles/common/components/Home';
@@ -24,7 +21,7 @@ const routing = (
                   <ul className="sidebar-nav">
                       <li className="sidebar-item">
                           <NavLink to="/" className="logo-link">
-                              <img src={Ionia} className="ionia-logo"></img>
+                              <img src={Ionia} className="ionia-logo" alt=""></img>
                           </NavLink>
                       </li>
                         <li className="sidebar-item">
