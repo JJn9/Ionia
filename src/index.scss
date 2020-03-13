@@ -101,6 +101,10 @@ body::-webkit-scrollbar-thumb {
     .link {
         transition: color $transition-speed;
     }
+    .navlink {
+        padding-top: 1.2rem;
+        height: 100%;
+    }
 }
 
 
