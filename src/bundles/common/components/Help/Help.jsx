@@ -147,13 +147,13 @@ class Help extends React.Component {
                     <div className="menu-col col-sm-1 col-xs-1">
                         <Scrollspy items={ ['section1', 'section2', 'section3'] } offset={ -100 } currentClassName="active"  className="menu">
                             <li className="menu-item">
-                                <a href="help/#section1" className="help-link">About Ionia</a>
+                                <a href="#section1" className="help-link">About Ionia</a>
                             </li>
                             <li className="menu-item">
-                                <a href="help/#section2" className="help-link">About me</a>
+                                <a href="#section2" className="help-link">About me</a>
                             </li>
                             <li className="menu-item">
-                                <a href="help/#section3" className="help-link">Contributing</a>
+                                <a href="#section3" className="help-link">Contributing</a>
                             </li>
                         </Scrollspy>
                     </div>
