@@ -32,7 +32,7 @@ body {
     a:hover {
         cursor: pointer;
         text-decoration: none;
-        color: $logo-color-secondary;
+        color: $logo-color;
     }
     textarea, select, input, button { outline: none; }
 }
@@ -50,6 +50,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #container {
+    min-height: 100vh;
     height: 100%;
     margin-top: 4.5rem;
 }
@@ -259,6 +260,31 @@ body::-webkit-scrollbar-thumb {
             margin: auto;
         }
     }
+
+    .content-col {
+        padding-top: 5rem;
+        max-width: 80%;
+        margin-right: 0;
+        .help-card {
+            height: 100%;
+            margin-left: 0.5em;
+            .content-test{
+                margin-bottom: 5rem;
+                line-height: 2rem;
+            }
+            .subtitle-line {
+                width: 20rem;
+                border-bottom: 2px solid $logo-color;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    
+    
+    .menu-col {
+        display: none;
+    }
 }
 
 /* Large screens */
@@ -266,10 +292,12 @@ body::-webkit-scrollbar-thumb {
 
     .left-col {
         margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .right-col {
         margin-top: 2rem;
+        margin-bottom: 2rem;
         max-height: 100%;
         overflow: auto;
     }
@@ -283,7 +311,50 @@ body::-webkit-scrollbar-thumb {
         padding: 3rem;
     }
 
-  }
+    .content-col {
+        padding-top: 5rem;
+        max-width: 80%;
+        margin-right: 2rem;
+        .help-card {
+            height: 100%;
+            margin-left: 30em;
+            .content-test{
+                margin-bottom: 5rem;
+                line-height: 2rem;
+            }
+            .subtitle-line {
+                width: 20rem;
+                border-bottom: 2px solid $logo-color;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    
+    
+    .menu-col {
+        padding-top: 5rem;
+        border-left: 1px solid $icons-secondary;
+        .menu {
+            height: 100%;
+            position: fixed;
+            text-align: justify;
+            list-style: none;
+            font-size: 1.5rem;
+            padding-inline-start: 0 !important;
+            .menu-item {
+                margin-left: 1rem;
+                margin-bottom: 2rem;
+                height: 2rem;
+                .help-link {
+                    text-decoration: none;
+                    color: $text-primary;
+                }
+            }
+        }
+    }
+
+}
 
   /*medium screens*/
   @media only screen and (min-width: 600px) and (max-width: 1024px){
@@ -386,6 +457,51 @@ body::-webkit-scrollbar-thumb {
             height: 4rem;
             font-size: 1.5rem;
             letter-spacing: 0.2rem;
+        }
+    }
+
+    .content-col {
+        padding-top: 2rem;
+        max-width: 80%;
+        margin-right: 1rem;
+        .help-card {
+            height: 100%;
+            margin-left: 1em;
+            .content-test{
+                margin-bottom: 5rem;
+                line-height: 2rem;
+            }
+            .subtitle-line {
+                width: 20rem;
+                border-bottom: 2px solid $logo-color;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    
+    
+    .menu-col {
+        padding-top: 2rem;
+        border-left: 1px solid $icons-secondary;
+        .menu {
+            // padding-left: 7rem;
+            height: 100%;
+            width: 18%;
+            position: fixed;
+            text-align: justify;
+            list-style: none;
+            font-size: 0.7rem;
+            padding-inline-start: 0 !important;
+            .menu-item {
+                margin-left: 0.5rem;
+                margin-bottom: 2rem;
+                height: 2rem;
+                .help-link {
+                    text-decoration: none;
+                    color: $text-primary;
+                }
+            }
         }
     }
 }

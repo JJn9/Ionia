@@ -67,7 +67,8 @@
 }
 
 .champion:hover {
-    border: solid 2px $logo-color;
+    // border: solid 2px $logo-color;
+    transform: scale(1.1);
 }
 
 ul {

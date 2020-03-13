@@ -6,7 +6,7 @@ class Help extends React.Component {
     render() {
         return (
                 <div className="row">
-                    <div className="content-col">
+                    <div className="content-col col-sm-11 col-xs-11">
                         <div className="help-card">
                             <section id="section1">
                                 <h1>About Ionia</h1>
@@ -144,7 +144,7 @@ class Help extends React.Component {
                             </section>
                         </div>
                     </div>
-                    <div className="menu-col">
+                    <div className="menu-col col-sm-1 col-xs-1">
                         <Scrollspy items={ ['section1', 'section2', 'section3'] } offset={ -100 } currentClassName="active"  className="menu">
                             <li className="menu-item">
                                 <a href="help/#section1" className="help-link">About Ionia</a>
